@@ -1,1 +1,10 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+:root {
+    --brand: #ff6600;
+    --ink: #333;
+    --muted: #666;
+    --space: 2rem;
+}
 body{background: #eee;}
