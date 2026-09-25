@@ -7,4 +7,32 @@
     --muted: #666;
     --space: 2rem;
 }
-body{background: #eee;}
+body {
+    font-family: system-ui, "Segoe UI", Arial, sans-serif;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0;
+    background: #fff;
+}
+main {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: var(--space);
+}
+a {
+    color: var(--brand);
+}
+nav a {
+    margin-right: var(--space);
+}
+a:hover {
+    text-decoration: none;
+}
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--brand);
+    outline-offset: 2px;
+}
