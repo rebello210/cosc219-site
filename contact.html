@@ -18,29 +18,41 @@
         <h1>contact me</h1>
         <form action="#" method="post">
             <fieldset>
-                <legend>Preferred contact form</legend>
-                <input type="radio" id="c-email" name="contact-method" value="email">
+                <legend>Preferred contact method</legend>
                 <label for="c-email">Email</label>
-                <input type="radio" id="c-phone" name="contact-method" value="phone">
+                <input type="radio" id="c-email" name="contact-method" value="email">
                 <label for="c-phone">Phone</label>
+                <input type="radio" id="c-phone" name="contact-method" value="phone">
+                
             </fieldset>
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+            </p>
             <p>
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
             </p>
             <p>
                 <label for="city">City:</label>
-                <input list="cities" id="city" name="city">
-                <datalist id="cities">
-                    <option value="kelowna">
-                    <option value="vernon">
-                    <option value="west kelowna">
-                </datalist>
+                <select id="city" name="city">
+                    <option value="vernon">Vernon</option>
+                    <option value="west-kelowna">West Kelowna</option>
+                    <option value="kelowna">Kelowna</option>
+                </select>
             </p>
             <p>
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" required></textarea>
             </p>
+            
+            <p>
+                <input type="checkbox" id="copy" name="copy" value="yes">
+                <label for="copy">Send me a copy of this message</label>
+            </p>
+            
             <button type="submit">Send Message</button>
         </form>
     </main>
