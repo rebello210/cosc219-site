@@ -85,3 +85,9 @@ label {
     margin-bottom: 0.5rem;
     font-weight: 500;
 }
+img {
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+}
