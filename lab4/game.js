@@ -188,3 +188,10 @@ function revealWord(word, guessedLetters) {
 function hasWon(word, guessedLetters) {
   return !revealWord(word, guessedLetters).includes("_");
 }
+
+//1-it would just cont the lives first but not crash. because if you swap them,
+//they don't use any variables from each other, so it would just return the lives first and not crash
+//the order would matter if they were using each other's variables.
+
+//2-without the isValidGuess chedk, the player would lose a life
+//The guard returns early with"enter a single letter" do bad input never reaches lives 
