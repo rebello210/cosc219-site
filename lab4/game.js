@@ -29,7 +29,12 @@ const STARTING_LIVES = 6;
    ---------------------------------------------------------------------- */
 
 function normalizeGuess(input) {
-
+   input = input.trim().toLowerCase();
+   if (input.length === 1 && input >= 'a' && input <= 'z') {
+      return input;
+   }
+   return "";
+   
 }
 
 
