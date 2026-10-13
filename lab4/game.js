@@ -140,7 +140,14 @@ function scoreFor(word, lives = STARTING_LIVES) {
    ---------------------------------------------------------------------- */
 
 function statusMessage(word, guessedLetters, lives) {
-
+   if (lives <= 0) {
+      return `Out of lives. The word was "${word}".`;
+   } else if (hasWon(word, guessedLetters)) {
+      return `You got it! "${word}" with ${lives} ${lives === 1 ? "life" : "lives"} left.`;
+   } else {
+      const guessed = guessedLetters.length > 0 ? guessedLetters : "nothing yet";
+      return `${lives} ${lives === 1 ? "life" : "lives"} left. Guessed: ${guessed}`;
+   }
 }
 
 
@@ -150,7 +157,17 @@ function statusMessage(word, guessedLetters, lives) {
    ---------------------------------------------------------------------- */
 
 function gradeFor(score) {
-
+   if (score >= 90) {
+      return "A";
+   } else if (score >= 80) {
+      return "B";
+   } else if (score >= 70) {
+      return "C";
+   } else if (score >= 60) {
+      return "D";
+   } else {
+      return "F";
+   }
 }
 
 
