@@ -53,6 +53,8 @@ function newGame() {
 }
 
 function submitGuess(raw) {
+  
+  
   if (over) return;
 
   if (!isValidGuess(raw)) {
@@ -70,6 +72,7 @@ function submitGuess(raw) {
   const correct = isCorrect(letter, word);
   guessedLetters = guessedLetters + letter;
   lives = livesAfterGuess(lives, correct);
+  
   over = lives <= 0 || hasWon(word, guessedLetters);
 
   render();
