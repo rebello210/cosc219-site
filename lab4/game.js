@@ -34,7 +34,7 @@ function normalizeGuess(input) {
       return input;
    }
    return "";
-   
+
 }
 
 
@@ -48,7 +48,8 @@ function normalizeGuess(input) {
    ---------------------------------------------------------------------- */
 
 function isValidGuess(input) {
-
+   const letter = normalizeGuess(input);
+   return letter !== "";
 }
 
 
@@ -64,7 +65,8 @@ function isValidGuess(input) {
    ---------------------------------------------------------------------- */
 
 function alreadyGuessed(letter, guessedLetters) {
-
+   letter = letter.toLowerCase();
+   return guessedLetters.includes(letter);
 }
 
 
@@ -79,7 +81,11 @@ function alreadyGuessed(letter, guessedLetters) {
    ---------------------------------------------------------------------- */
 
 function isCorrect(letter, word) {
-
+   const normalizedLetter = normalizeGuess(letter);
+   if (normalizedLetter === "") {
+      return false;
+   }
+   return word.toLowerCase().includes(normalizedLetter);
 }
 
 
