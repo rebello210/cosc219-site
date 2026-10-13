@@ -22,9 +22,6 @@ main {
 a {
     color: var(--brand);
 }
-nav a {
-    margin-right: var(--space);
-}
 a:hover {
     text-decoration: none;
 }
@@ -86,8 +83,27 @@ label {
     font-weight: 500;
 }
 img {
-    max-width: 500px;
+    max-width: 350px;
     height: auto;
     display: block;
     margin: 1rem 0;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+nav .site-name {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+nav a {
+    margin: 0;
+}
+@media (min-width: 38) {
+    nav {
+        gap: 2rem;
+    }
 }
